@@ -1,4 +1,4 @@
-o#include <stdio.h>
+#include <stdio.h>
 /**
  * main - C program that prints the size of various types
  * Code by Prince Solomon
