@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*
  * main - my first c programming
- * Description: Cprogram
+ *
  * Return: 0
 */
 
