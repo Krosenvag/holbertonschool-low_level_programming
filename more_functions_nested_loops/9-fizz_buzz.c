@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - Entry
+ * main - Enrty
  *
  * Description: prints the numbers 1 - 100 w/
  * Fizz for multiples of 3, Bizz for multiple of 5,
@@ -11,7 +11,6 @@
  * Return: always 0
  */
 int main(void)
-
 {
 	int i;
 
