@@ -3,7 +3,7 @@
 /**
  * print_diagonal - printing lines in diagonal
  * @n: input variable
- * Code by krosen
+ * Krosen
  * Return: void
  */
 
