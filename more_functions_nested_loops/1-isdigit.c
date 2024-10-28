@@ -3,7 +3,7 @@
 /**
  * _isdigit - write a function that check for a digit (0 throuh 9)
  * @c: characters to check
- * 
+ * Krosen
  * Return: 0 or 1
  */
 
