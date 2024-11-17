@@ -1,43 +1,29 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
- * **alloc_grid - creates a two dimensional array of ints
- * @width: width of the matrix
- * @height: height of the matrix
- * Return: pointer to the created matrix (Success)
- * or NULL (Error)
+ * array_range - Creates an array of integers ordered
+ * from min to max, inclusive.
+ * @min: The first value of the array.
+ * @max: The last value of the array.
+ * Return: If min > max or the function fails - NULL.
+ * Otherwise - a pointer to the newly created array.
  */
-int **alloc_grid(int width, int height)
+int *array_range(int min, int max)
 {
-	int **arr;
-	int i, j;
+	int *array, index, size;
 
-	if (height <= 0 || width <= 0)
+	if (min > max)
 		return (NULL);
 
-	arr = (int **) malloc(sizeof(int *) * height);
+	size = max - min + 1;
 
-	if (arr == NULL)
+	array = malloc(sizeof(int) * size);
+
+	if (array == NULL)
 		return (NULL);
 
-	for (i = 0; i < height; i++)
-	{
-		arr[i] = (int *) malloc(sizeof(int) * width);
-		if (arr[i] == NULL)
-		{
-			free(arr);
-			for (j = 0; j <= i; j++)
-				free(arr[j]);
-			return (NULL);
-		}
-	}
+	for (index = 0; index < size; index++)
+		array[index] = min++;
 
-	for (i = 0; i < height; i++)
-	{
-		for (j = 0; j < width; j++)
-		{
-			arr[i][j] = 0;
-		}
-	}
-	return (arr);
+	return (array);
 }
